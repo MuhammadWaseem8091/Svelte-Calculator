@@ -108,5 +108,5 @@ npm run build
 surge public my-project.surge.sh
 ```
 
-
-Muhammad Waseem 
+Hi, Muhammad Waseem
+This is my first svelte project.  
