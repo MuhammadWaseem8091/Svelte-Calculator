@@ -2,12 +2,22 @@
 	import { createEventDispatcher } from 'svelte';
 
 	let value = '';
-	// let submited=false;
+	let array = [];
+
+	$: view = value ? value : '0';
+
 
 	// const dispatch = createEventDispatcher();
 
 	const select = num => () => {
-		value += num;
+		if(array.length==1)
+		{
+			value=num;
+			array=[];
+		}else{
+			value += num;
+		}
+	
 	} 
 	const clear  = () => {
 		value = '';
@@ -17,9 +27,10 @@
 		view =calculation_arr(convertStrToArray(value));
 		
 	}
+	
 
 	function convertStrToArray(v) {
-		let array = [];
+		// let array = [];
 		let previosOperatorIndex = 0;
 
 		if (checkValidInput(v)) {
@@ -159,10 +170,6 @@
 		console.log(arr);
 		return arr[0];
 	}
-		
-
-
-	$: view = value ? value : '0';
 	
 </script>
 <h1 style="color: {value ? '#333' : '#ccc'}">{view}</h1>
