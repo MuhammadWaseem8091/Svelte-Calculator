@@ -1,8 +1,5 @@
 <script >
-	import CalApp from "./CalApp.svelte";
 import Calculator from "./calculator.svelte";
-import Check from "./check.svelte";
-
 </script>
 
 <main>

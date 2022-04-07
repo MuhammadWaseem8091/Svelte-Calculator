@@ -4,7 +4,7 @@
 	let value = '';
 	// let submited=false;
 
-	const dispatch = createEventDispatcher();
+	// const dispatch = createEventDispatcher();
 
 	const select = num => () => {
 		value += num;
