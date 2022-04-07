@@ -12,7 +12,7 @@
 	const select = num => () => {
 		if(array.length==1)
 		{
-			value=num;
+			value =num.toString();
 			array=[];
 		}else{
 			value += num;
